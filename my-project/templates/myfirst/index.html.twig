@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: auto; width: 80%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    
+    <table border='1'>
+		<tr>
+				<th>Number </th>
+                <th>Repository Name </th>
+				<th>Owner </th>
+				<th>Description </th>
+				<th>Watchers </th>
+				<th>Size </th>
+				<th>Url </th>
+				
+		</tr>		
+			{% set i = 0 %}
+		{% for rep in repositories %}
+			
+			{% for eachrep in rep %}
+			<tr>
+				{% set i = i + 1 %}
+				<td>{{i}}</td>
+                <td>{{eachrep.name}}</td>
+				<td>{{eachrep.owner}}</td>
+				<td>{{eachrep.description}}</td>
+				<td>{{eachrep.watchers}}</td>
+				<td>{{eachrep.size}}</td>
+				<td>{{eachrep.url}}</td>
+				</tr>
+			{% endfor %}
+			
+		{% endfor %}
+		
+        <!--<li>Your controller at <code><a href="{{ 'src/Controller/MyfirstController.php'|file_link(0) }}">src/Controller/MyfirstController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'templates/myfirst/index.html.twig'|file_link(0) }}">templates/myfirst/index.html.twig</a></code></li -->
+    </table>
+</div>
+{% endblock %}
