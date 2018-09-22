@@ -1,0 +1,7 @@
+Check important code is in below files
+
+1. MyFirstController.php
+https://github.com/ramgudeamol/amol_ramgude/blob/master/my-project/src/Controller/MyfirstController.php
+
+2. index.html.twig
+https://github.com/ramgudeamol/amol_ramgude/blob/master/my-project/templates/myfirst/index.html.twig
